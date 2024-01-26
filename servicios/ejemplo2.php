@@ -1,5 +1,5 @@
 <?php
-include 'ejemplo.php';
+include './ejemplo.php';
 
 $peliculas = new SimpleXMLElement($xmlstr);
 
