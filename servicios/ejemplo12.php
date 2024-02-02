@@ -1,6 +1,6 @@
 <?php
 $dom = new DOMDocument;
-$dom->loadXML('./peliculas.xml');
+$dom->loadXML("./peliculas.xml");
 if (!$dom) {
     echo 'Error al analizar el documento');
     exit;
