@@ -1,8 +1,11 @@
 <?php
-$dom = new DOMDocument();
+$xmlDoc = new DOMDocument();
+$xmlDoc->load("peliculas.xml");
+print $xmlDoc->saveXML();
+
+
 /*
 echo "antes load";
-/*
 
 $dom->loadXML("peliculas.xml");
 $dom->normalizeDocument();
