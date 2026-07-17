@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - webphpawo
+name: Build and deploy PHP app to Azure Web App - websvrphp01
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.5'
+          php-version: '8.2'
 
       - name: Check if composer.json exists
         id: check_files
@@ -56,15 +56,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_01B549ED2B8848FD86E33555DDDA8F72 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C9729A2CD1E541DB9AB17A4A25EB3B6D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D9B2606212AF4F40B186A0ECA578B82A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_98B2AEF98CD24064996C5D055B336EA8 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5D9954E2F35640D0A0E885BB4356A05C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_62C73BAF0FA54B36BB42D7F841BB005B }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'webphpawo'
+          app-name: 'websvrphp01'
           slot-name: 'Production'
           package: .
           
